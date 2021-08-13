@@ -1,0 +1,32 @@
+@import "./variables";
+
+#header {
+    padding-top: 3em;
+    height: 300px;
+    background-repeat: no-repeat;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        h1 {
+            color: $Very-Light-Gray;
+            text-transform: uppercase;
+            letter-spacing: 0.5em;
+        }
+    }
+}
+
+.header-light {
+    background-image: url(/images/bg-desktop-light.jpg);
+}
+
+.header-dark {
+    background-image: url(/images/bg-desktop-dark.jpg);
+}
+
+.display {
+    display: initial;
+}
+.hidden {
+    display: none;
+}

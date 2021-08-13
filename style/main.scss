@@ -1,0 +1,85 @@
+@import "./variables";
+@import "./header";
+@import "./todo_class";
+
+* {
+    font-size: $Font-size;
+    font-family: $font-family;
+}
+main {
+    height: 100%;
+    padding-bottom: 3em;
+}
+.light-background {
+    background-color: $Very-Light-Grayish-Blue;
+}
+.dark-background {
+    background-color: $Very-Dark-Blue;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn {
+    border-color: rgba($color: #000000, $alpha: 0);
+    background-color: rgba($color: #000000, $alpha: 0);
+    cursor: pointer;
+}
+#block {
+    height: 1em;
+    width: 100%;
+    display: inline-block;
+}
+.darg-drop {
+    text-align: center;
+    margin-top: 3em;
+    color: $Dark-Grayish-Blue;
+    font-size: 0.8rem;
+}
+
+@media (max-width : 650px)  {
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        .actions {
+            .buttons {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width : 510px)  {
+
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        .actions {
+            .first-action-bottons {
+                display: none;
+            }
+        }
+        .splited-bar {
+            display: initial;
+        }
+    }
+}
+
+@media (max-width : 410px)  {
+    * {
+        font-size: 16px;
+    }
+    .container {
+        max-width: 350px;
+        margin: 0 auto;
+        .actions {
+            .first-action-bottons {
+                display: none;
+            }
+        }
+        .splited-bar {
+            display: initial;
+        }
+    }
+}

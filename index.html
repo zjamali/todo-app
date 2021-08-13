@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="./style/main.css">
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      padding: 2em;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="light-background">
+    <div id="header" class="header-light">
+      <div class="container">
+        <h1> Todo </h1>
+        <button class="btn" id="switch-light-dark">
+          <img class="switch-mode display" id="moon-icon" src="./images/icon-moon.svg" alt="dark mode icon">
+          <img class="switch-mode hidden" id="sun-icon" src="./images/icon-sun.svg" alt="light mode icon">
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="todo ">
+        <div class="add-todo-list">
+          <div class="input light-todo">
+            <div>
+              <button id="add-list-checkbox" class="add-list-checkbox-light" disabled></button>
+            </div>
+            <form action="">
+              <input name="new-todo" class="add-list light-background" type="text" placeholder="Create a new todo">
+            </form>
+          </div>
+        </div>
+        <div id="block">
+        </div>
+        <!--            item prototype div start       -->
+        <div id="item" class="item light-todo" style="display: none;">
+          <div class="item-content">
+            <button id="add-list-checkbox" class="add-list-checkbox-light">
+              <img class="hidden" src="./images/icon-check.svg" alt="icon-check">
+            </button>
+            <h3>item</h3>
+          </div>
+          <button class="btn cross-btn">
+            <img class="cross-img hidden" src="./images/icon-cross.svg" alt="cross-check">
+          </button>
+        </div>
+        <div id="items-list">
+          <!--            items list              -->
+
+        </div>
+        <div class="actions  light-todo">
+          <div class="items-count">
+            <p> <span>1</span> items left</p>
+          </div>
+          <div class="buttons first-action-bottons">
+            <button id="all" class="btn action-btn action-btn-light selected">All</button>
+            <button id="active"class="btn action-btn action-btn-light">Active</button>
+            <button id="completed" class="btn action-btn action-btn-light">Completed</button>
+          </div>
+          <button id="clear-completed" class="btn action-btn action-btn-light clear-completed">Clear Completed</button>
+        </div>
+
+        <div class="actions splited-bar light-todo">
+          <div class="buttons second-action-bottons">
+            <button id="all" class="btn action-btn action-btn-light selected">All</button>
+            <button id="active"class="btn action-btn action-btn-light">Active</button>
+            <button id="completed" class="btn action-btn action-btn-light">Completed</button>
+          </div>
+        </div>
+      </div>
+      <div class="darg-drop">
+        <p> Drag and drop to reorder list </p>
+      </div>
+    </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/zjamali">Zouhair Jamali</a>.
+  </div>
+
+  <script src="./script/app.js">
+  </script>
+</body>
+
+</html>

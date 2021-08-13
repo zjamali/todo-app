@@ -1,0 +1,244 @@
+@import "./variables";
+
+.todo {
+    margin-top: -10em;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    color: $Dark-Grayish-Blue;
+    .actions {
+        border-bottom-left-radius: 0.2em;
+        border-bottom-right-radius: 0.2em;
+        padding: 0.4em 1em;
+        font-weight: 400;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .items-count > p,
+        span {
+            font-size: 0.85rem;
+            color: $Dark-Grayish-Blue;
+        }
+        .buttons {
+            margin-left: 3em;
+            align-self: center;
+            justify-self: center;
+            .selected {
+                color: $Bright-Blue ;
+                &:hover{
+                    color: $Bright-Blue ;
+                }
+            }
+        }
+
+        .action-btn-light {
+            &:hover {
+                color: $Very-Dark-Grayish-Blue;
+            }
+            color: $Dark-Grayish-Blue;
+            font-weight: 600;
+            font-size: 1rem;
+
+        }
+        .action-btn-dark {
+            &:hover {
+                color: $Light-Grayish-Blue-hover;
+            }
+            color: $Dark-Grayish-Blue;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .clear-completed {
+            color: $Dark-Grayish-Blue;
+            font-size: 0.85rem;
+            font-weight: 400;
+            padding: 0;
+            border-width: 0;
+        }
+    }
+    .splited-bar{
+        margin-top: 1em;
+        display: none;
+        height: 3em;
+        border-radius: 0.3em;
+        .buttons {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.add-todo-list {
+    width: 100%;
+    margin: 0;
+    border: none;
+    .add-list {
+        font-size: 1.2em;
+        border: none;
+        width: 100%;
+        border-radius: 0.2em;
+        background: url() no-repeat scroll 7px 7px;
+        padding-left: 30px;
+        &::placeholder {
+            color: $Dark-Grayish-Blue;
+        }
+    }
+    input:focus,
+    textarea:focus,
+    select:focus,
+    button:focus {
+        outline: none;
+    }
+    input {
+        caret-color: $Bright-Blue;
+    }
+    .input {
+        .add-list-checkbox-light:hover {
+            background-color: $Very-Light-Gray;
+            border: 1px solid $Light-Grayish-Blue;
+        }
+        .add-list-checkbox-dark:hover {
+            background-color: $Very-Dark-Desaturated-Blue;
+            border: 1px solid $Dark-Grayish-Blue;
+        }
+        padding: 1em 0em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 0.3em;
+        width: 100%;
+    }
+}
+
+.light-background {
+    background-color: $Light-Grayish-Blue;
+    color: $Very-Dark-Blue;
+}
+
+.dark-background {
+    background-color: $Very-Dark-Desaturated-Blue;
+    color: $Light-Grayish-Blue;
+}
+
+.add-list-checkbox-light {
+    background-color: $Very-Light-Gray;
+    border: 1px solid $Light-Grayish-Blue;
+}
+.add-list-checkbox-dark {
+    background-color: $Very-Dark-Desaturated-Blue;
+    border: 1px solid $Dark-Grayish-Blue;
+}
+
+#add-list-checkbox {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-left: 1.2em;
+}
+
+.add-list-checkbox-light:hover {
+    background: linear-gradient($Very-Light-Gray, $Very-Light-Gray) padding-box,
+        linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+    border: 1px solid transparent;
+}
+
+.add-list-checkbox-dark:hover {
+    background: linear-gradient($Very-Dark-Desaturated-Blue, $Very-Dark-Desaturated-Blue) padding-box,
+        linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+    border: 1px solid transparent;
+}
+
+.light-todo {
+    background-color: $Very-Light-Gray;
+    color: hsl(235, 19%, 35%);
+    input {
+        color: hsl(235, 19%, 35%);
+    }
+    .item-content {
+        color: hsl(235, 19%, 35%);
+        &:hover {
+            color: $Very-Dark-Blue;
+        }
+    }
+}
+.dark-todo {
+    background-color: $Very-Dark-Desaturated-Blue;
+    .item-content {
+        color: $Light-Grayish-Blue;
+        &:hover {
+            color: $Very-Light-Gray;
+        }
+    }
+    input {
+        color: $Light-Grayish-Blue;
+    }
+    .cross-img {
+        filter: brightness(3);
+    }
+}
+
+#items-list {
+    width: 100%;
+    .item {
+        height: 4em;
+        &:hover {
+            .cross-img {
+                display: initial;
+                &:hover {
+                    transform: scale(1.2);
+                    transition: ease-in 0.1s;
+                    padding-right: 0.7em;
+                }
+            }
+        }
+        &:nth-child(2) {
+            border-top-left-radius: 0.3em;
+            border-top-right-radius: 0.3em;
+        }
+        width: 100%;
+        border-bottom: 1px solid hsl(236, 9%, 61%);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .cross-img {
+            padding-right: 0.8em;
+        }
+        .item-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            #add-list-checkbox {
+                margin-right: 1em;
+                margin-top: 0.1em;
+                align-self: center;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.check-box-clicked {
+    background: hsl(192, 100%, 67%);
+    background: linear-gradient(150deg, hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%) 100%);
+    border: none;
+    img {
+        margin: auto;
+    }
+}
+.completed {
+    text-decoration: line-through;
+    color: hsl(236, 9%, 61%);
+}
